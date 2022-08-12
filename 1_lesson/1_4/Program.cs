@@ -6,6 +6,11 @@
 
 Console.Write("Введите целое трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
+if (num >= 100 && num <=999)
 {
-    Console.Write(num % 10);
+    Console.Write($"Последняя цифра числа: {num % 10}");
+}
+else
+{
+    Console.Write("Некорректно введено число");
 }
