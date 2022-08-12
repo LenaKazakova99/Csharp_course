@@ -9,9 +9,6 @@ int M = -N;
 
 while (M < N + 1)
 {
-    if (M % 2 == 0)
-    {
-        Console.WriteLine(M);
-    }
+    Console.WriteLine(M);
     M++;
 }
