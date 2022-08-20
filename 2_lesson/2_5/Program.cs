@@ -10,16 +10,11 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число 2: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-void Kvadrat(int num1, int num2)
+bool Del(int num1, int num2)
 {
-    if (num1 == num2 * num2)
-    {
-        Console.WriteLine($"Число {num1} является квадратом числа {num2}");
-    }
-    else
-    {
-        Console.WriteLine($"Число {num1} не является квадратом числа {num2}");
-    }
+    return num1 * num1 == num2 || num2 * num2 == num1;
 }
 
-Kvadrat(num1, num2);
+bool result = Del(num1, num2);
+
+Console.WriteLine(result ? "Является квадратом" : "Не является квадратом");
