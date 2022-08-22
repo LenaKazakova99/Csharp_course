@@ -7,23 +7,21 @@ int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
-if (x > 0 && y > 0)
+// if (x > 0 && y > 0) Console.WriteLine("I четверть");
+// else if (x < 0 && y > 0) Console.WriteLine("II четверть");
+// else if (x < 0 && y < 0) Console.WriteLine("III четверть");
+// else if (x > 0 && y < 0) Console.WriteLine("IV четверть");
+// else Console.WriteLine("Введены некорректные координаты");
+
+
+string Quater(int xc, int yc)
 {
-    Console.WriteLine("I четверть");
+    if (xc > 0 && yc > 0) return "I четверть";
+    if (xc < 0 && yc > 0) return "II четверть";
+    if (xc < 0 && yc < 0) return "III четверть";
+    if (xc > 0 && yc < 0) return "IV четверть";
+    return "Введены некорректные координаты";
 }
-else if (x < 0 && y > 0)
-{
-    Console.WriteLine("II четверть");
-}
-else if (x < 0 && y < 0)
-{
-    Console.WriteLine("III четверть");
-}
-else if (x > 0 && y < 0)
-{
-    Console.WriteLine("IV четверть");
-}
-else
-{
-Console.WriteLine("Введены некорректные координаты");
-}
+
+string result = Quater(x, y);
+Console.WriteLine(result);
