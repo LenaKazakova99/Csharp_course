@@ -20,4 +20,4 @@ double Distance(int x1, int y1, int x2, int y2)
 }
 
 double result = Distance(x1, y1, x2, y2);
-Console.WriteLine($"Расстояние между точками A ({x1}, {y1}) и B ({x2}, {y2}) = {result}");
+Console.WriteLine($"Расстояние между точками A ({x1}, {y1}) и B ({x2}, {y2}) = {Math.Round(result,2)}");
