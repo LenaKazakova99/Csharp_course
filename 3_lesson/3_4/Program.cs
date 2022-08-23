@@ -11,7 +11,7 @@ void Kvadrat(int N)
     int count = 1;
     while (count <= N)
     {
-        Console.WriteLine($"{count }, {count * count}");
+        Console.WriteLine($"{count } | {Math.Pow(count, 2)}");
         count++;
     }
 }
