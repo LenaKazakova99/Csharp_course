@@ -2,10 +2,10 @@
 //            заполненный нулями и единицами в случайном порядке.
 //            [1,0,1,1,0,1,0,0]
 
-int[] result = FillArray(8, 0, 2);
+int[] result = CreateArray(8, 0, 2);
 PrintArr(result);
 
-int[] FillArray(int n, int min, int max)
+int[] CreateArray(int n, int min, int max)
 {
     int[] array = new int[n];
     for (int i = 0; i < array.Length; i++)
