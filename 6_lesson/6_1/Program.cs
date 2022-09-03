@@ -43,7 +43,19 @@ void ReverseArray(int[] array)
     }
 }
 
-int[] arr = CreateArrayRndInt(5, 1, 9);
+void ReverseArray1(int[] array)
+{
+    int size = array.Length;
+    for (int i = 0; i < size / 2; i++)
+    {
+        int temp = array[i];
+        array[i] = array[array.Length - 1 - i];
+        array[array.Length - 1 - i] = temp;
+    }
+}
+
+int[] arr = CreateArrayRndInt(5, 1, 25);
 PrintArray(arr);
-ReverseArray(arr);
+// ReverseArray(arr);
+ReverseArray1(arr);
 PrintArray(arr);
