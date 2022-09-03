@@ -5,21 +5,34 @@
 //            2 -> 10
 //            13 -> 1101
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int ChangeToBin(int a)
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int ChangeToBin(int a)
+// {
+//     int result = 0;
+//     int mult = 1;
+//     // int b = a % 2;
+//     // int c = a / 2;
+//     while (a > 0)
+//     {
+//         result += a % 2 * mult;
+//         a /= 2;
+//         mult *= 10;
+//     }
+//     return result;
+// }
+// int res = ChangeToBin(num);
+// Console.WriteLine($"Число {num} в двоичной системе -> {res}");
+
+// Решение с помощью РЕКРУСИИ
+
+int num = 13;
+
+void DecToBin (int n) // 13
 {
-    int result = 0;
-    int mult = 1;
-    // int b = a % 2;
-    // int c = a / 2;
-    while (a > 0)
-    {
-        result += a % 2 * mult;
-        a /= 2;
-        mult *= 10;
-    }
-    return result;
+    if (n == 0) return;
+    DecToBin(n / 2);
+    Console.Write(n % 2);
 }
-int res = ChangeToBin(num);
-Console.WriteLine($"Число {num} в двоичной системе -> {res}");
+
+DecToBin(num);
